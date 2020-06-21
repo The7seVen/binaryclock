@@ -1,6 +1,18 @@
 body {
     background-color: gray;
-}
-header {
+    margin: 0 auto;
+    padding: 0;
     text-align: center;
+}
+nav {
+    float: left;
+}
+main {
+    float: left;
+}
+aside {
+    float: left;
+}
+footer {
+    clear: both;
 }
