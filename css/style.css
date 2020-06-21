@@ -26,6 +26,7 @@ footer {
 
 table {
     text-align: center;
+    border: 1px solid black;
 }
 table > tbody > tr > td {
     width: 20px;
