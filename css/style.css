@@ -1,18 +1,32 @@
+/* Parts of website  */
 body {
     background-color: gray;
     margin: 0 auto;
     padding: 0;
+}
+header {
+    width: 100%;
     text-align: center;
 }
-nav {
+nav, main, aside {
     float: left;
 }
+
 main {
-    float: left;
+    text-align: center;
 }
-aside {
-    float: left;
-}
+
 footer {
     clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+/* Elements of webstie */
+
+table {
+    text-align: center;
+}
+table > tbody > tr > td {
+    width: 20px;
 }

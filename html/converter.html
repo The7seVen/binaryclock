@@ -8,14 +8,27 @@
     <script src="../js/hourToBinaryClock.js"></script>
 </head>
 <body>
-    <fieldset>
-        <legend>Czas do konwersji</legend>
-        <form>
-            <label>Podaj godzinę do konwersji (w systemie HH:MM:SS) <input type="text" name="hour" id="hourToConvert"> </label>
-            <input type="button" value="Pokaż godzinę" onclick="hourToBinaryClock()">
-        </form>
-    </fieldset>
-    <section id="result"></section>
-    <a href="../index.html">Powrót na stronę główną!</a>
+    <header>
+        <h1>konwersja czasu do zegara binarnego</h1>
+    </header>
+    <nav>
+        <h3>Linki:</h3>
+        <ul>
+            <li><a href="index.html">Strona główna</a> </li>
+            <li><a href="html/converter.html">Pokazanie danego czasu na zegarze binarnym</a> </li>
+            <li><a href="html/mechanics.html"> Zasady działania zegara binarnego</a> </li>
+        </ul>
+    </nav>
+    <main>
+        <fieldset>
+            <legend>Czas do konwersji</legend>
+            <form>
+                <label>Podaj godzinę do konwersji (w systemie HH:MM:SS) <input type="text" name="hour" id="hourToConvert"> </label>
+                <input type="button" value="Pokaż godzinę" onclick="hourToBinaryClock()">
+            </form>
+        </fieldset>
+        <section id="result"></section>
+        <a href="../index.html">Powrót na stronę główną!</a>
+    </main>
 </body>
 </html>
