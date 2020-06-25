@@ -1,10 +1,11 @@
-//document.getElementById("G82").classList.add('one');
-
-//var output = "Hello world!".split('');
-//console.log(output);
-
-function dec2bin(dec){
-    return dec.toString(2);
+function state(bit, id){
+    if(bit=="1"){
+        document.getElementById(id).classList.add('one');
+        document.getElementById(id).classList.remove('zero');
+    }else{
+        document.getElementById(id).classList.remove('one');
+        document.getElementById(id).classList.add('zero');
+    }
 }
 
 var ticker = window.setInterval(function(){ //powtórz co sekundę
@@ -25,49 +26,14 @@ var ticker = window.setInterval(function(){ //powtórz co sekundę
 
     //ustaw tło dla bita
 
-    if(G_1_bin_arr[0]=="1"){
-        document.getElementById("G1A").classList.add('one');
-        document.getElementById("G1A").classList.remove('zero');
-    }else{
-        document.getElementById("G1A").classList.remove('one');
-        document.getElementById("G1A").classList.add('zero');
-    }
-    if(G_1_bin_arr[1]=="1"){
-        document.getElementById("G2A").classList.add('one');
-        document.getElementById("G2A").classList.remove('zero');
-    }else{
-        document.getElementById("G2A").classList.remove('one');
-        document.getElementById("G2A").classList.add('zero');
-    }
+    state(G_1_bin_arr[0], "G1A");
+    state(G_1_bin_arr[1], "G2A");
+    
+    state(G_2_bin_arr[0], "G1B");
+    state(G_2_bin_arr[1], "G2B");
+    state(G_2_bin_arr[2], "G4B");
+    state(G_2_bin_arr[3], "G8B");
 
-    if(G_2_bin_arr[0]=="1"){
-        document.getElementById("G1B").classList.add('one');
-        document.getElementById("G1B").classList.remove('zero');
-    }else{
-        document.getElementById("G1B").classList.remove('one');
-        document.getElementById("G1B").classList.add('zero');
-    }
-    if(G_2_bin_arr[1]=="1"){
-        document.getElementById("G2B").classList.add('one');
-        document.getElementById("G2B").classList.remove('zero');
-    }else{
-        document.getElementById("G2B").classList.remove('one');
-        document.getElementById("G2B").classList.add('zero');
-    }
-    if(G_2_bin_arr[2]=="1"){
-        document.getElementById("G4B").classList.add('one');
-        document.getElementById("G4B").classList.remove('zero');
-    }else{
-        document.getElementById("G4B").classList.remove('one');
-        document.getElementById("G4B").classList.add('zero');
-    }
-    if(G_2_bin_arr[3]=="1"){
-        document.getElementById("G8B").classList.add('one');
-        document.getElementById("G8B").classList.remove('zero');
-    }else{
-        document.getElementById("G8B").classList.remove('one');
-        document.getElementById("G8B").classList.add('zero');
-    }
     //itd.
 
     var M_raw = parseInt(time.getMinutes());
@@ -83,56 +49,14 @@ var ticker = window.setInterval(function(){ //powtórz co sekundę
     M_1_bin_arr.reverse();
     M_2_bin_arr.reverse();
 
-    if(M_1_bin_arr[0]=="1"){
-        document.getElementById("M1A").classList.add('one');
-        document.getElementById("M1A").classList.remove('zero');
-    }else{
-        document.getElementById("M1A").classList.remove('one');
-        document.getElementById("M1A").classList.add('zero');
-    }
-    if(M_1_bin_arr[1]=="1"){
-        document.getElementById("M2A").classList.add('one');
-        document.getElementById("M2A").classList.remove('zero');
-    }else{
-        document.getElementById("M2A").classList.remove('one');
-        document.getElementById("M2A").classList.add('zero');
-    }
-    if(M_1_bin_arr[2]=="1"){
-        document.getElementById("M4A").classList.add('one');
-        document.getElementById("M4A").classList.remove('zero');
-    }else{
-        document.getElementById("M4A").classList.remove('one');
-        document.getElementById("M4A").classList.add('zero');
-    }
-
-    if(M_2_bin_arr[0]=="1"){
-        document.getElementById("M1B").classList.add('one');
-        document.getElementById("M1B").classList.remove('zero');
-    }else{
-        document.getElementById("M1B").classList.remove('one');
-        document.getElementById("M1B").classList.add('zero');
-    }
-    if(M_2_bin_arr[1]=="1"){
-        document.getElementById("M2B").classList.add('one');
-        document.getElementById("M2B").classList.remove('zero');
-    }else{
-        document.getElementById("M2B").classList.remove('one');
-        document.getElementById("M2B").classList.add('zero');
-    }
-    if(M_2_bin_arr[2]=="1"){
-        document.getElementById("M4B").classList.add('one');
-        document.getElementById("M4B").classList.remove('zero');
-    }else{
-        document.getElementById("M4B").classList.remove('one');
-        document.getElementById("M4B").classList.add('zero');
-    }
-    if(M_2_bin_arr[3]=="1"){
-        document.getElementById("M8B").classList.add('one');
-        document.getElementById("M8B").classList.remove('zero');
-    }else{
-        document.getElementById("M8B").classList.remove('one');
-        document.getElementById("M8B").classList.add('zero');
-    }
+    state(M_1_bin_arr[0], "M1A");
+    state(M_1_bin_arr[1], "M2A");
+    state(M_1_bin_arr[2], "M3A");
+    
+    state(M_2_bin_arr[0], "M1B");
+    state(M_2_bin_arr[1], "M2B");
+    state(M_2_bin_arr[2], "M4B");
+    state(M_2_bin_arr[3], "M8B");
 
     var S_raw = parseInt(time.getSeconds());
 
@@ -147,55 +71,13 @@ var ticker = window.setInterval(function(){ //powtórz co sekundę
     S_1_bin_arr.reverse();
     S_2_bin_arr.reverse();
 
-    if(S_1_bin_arr[0]=="1"){
-        document.getElementById("S1A").classList.add('one');
-        document.getElementById("S1A").classList.remove('zero');
-    }else{
-        document.getElementById("S1A").classList.remove('one');
-        document.getElementById("S1A").classList.add('zero');
-    }
-    if(S_1_bin_arr[1]=="1"){
-        document.getElementById("S2A").classList.add('one');
-        document.getElementById("S2A").classList.remove('zero');
-    }else{
-        document.getElementById("S2A").classList.remove('one');
-        document.getElementById("S2A").classList.add('zero');
-    }
-    if(S_1_bin_arr[2]=="1"){
-        document.getElementById("S4A").classList.add('one');
-        document.getElementById("S4A").classList.remove('zero');
-    }else{
-        document.getElementById("S4A").classList.remove('one');
-        document.getElementById("S4A").classList.add('zero');
-    }
-
-    if(S_2_bin_arr[0]=="1"){
-        document.getElementById("S1B").classList.add('one');
-        document.getElementById("S1B").classList.remove('zero');
-    }else{
-        document.getElementById("S1B").classList.remove('one');
-        document.getElementById("S1B").classList.add('zero');
-    }
-    if(S_2_bin_arr[1]=="1"){
-        document.getElementById("S2B").classList.add('one');
-        document.getElementById("S2B").classList.remove('zero');
-    }else{
-        document.getElementById("S2B").classList.remove('one');
-        document.getElementById("S2B").classList.add('zero');
-    }
-    if(S_2_bin_arr[2]=="1"){
-        document.getElementById("S4B").classList.add('one');
-        document.getElementById("S4B").classList.remove('zero');
-    }else{
-        document.getElementById("S4B").classList.remove('one');
-        document.getElementById("S4B").classList.add('zero');
-    }
-    if(S_2_bin_arr[3]=="1"){
-        document.getElementById("S8B").classList.add('one');
-        document.getElementById("S8B").classList.remove('zero');
-    }else{
-        document.getElementById("S8B").classList.remove('one');
-        document.getElementById("S8B").classList.add('zero');
-    }
+    state(S_1_bin_arr[0], "S1A");
+    state(S_1_bin_arr[1], "S2A");
+    state(S_1_bin_arr[2], "S3A");
+    
+    state(S_2_bin_arr[0], "S1B");
+    state(S_2_bin_arr[1], "S2B");
+    state(S_2_bin_arr[2], "S4B");
+    state(S_2_bin_arr[3], "S8B");
 
 },1000);
