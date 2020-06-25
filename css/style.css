@@ -1,6 +1,6 @@
 /* Parts of website  */
 body {
-    background-color: gray;
+    background-color: white;
     margin: 0 auto;
     padding: 0;
 }
@@ -9,11 +9,12 @@ header {
     text-align: center;
 }
 nav, main, aside {
-    float: left;
+    
 }
 
 main {
     text-align: center;
+    margin: 0 auto;
 }
 
 footer {
@@ -30,4 +31,10 @@ table {
 }
 table > tbody > tr > td {
     width: 20px;
+}
+.zero {
+    background-color: white;
+}
+.one {
+    background-color: black;
 }
