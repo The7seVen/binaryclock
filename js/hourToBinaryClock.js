@@ -16,11 +16,10 @@ function hourToBinaryClock() {
             var second = parts[6] + parts[7];
             if (!(hour >= 0 && hour <= 24) || !(minute >= 0 && minute <= 59) || !(second >= 0 && second <= 59)) [
                 result.innerHTML = "<span style='color:red'>Proszę podać istniejącą godzinę!</span>"
-                
             ]
             else {
                 result.innerHTML = "<span style='color:green'>Poprawna godzina!</span>";
-                // dkono
+                
             }
         }
     }
